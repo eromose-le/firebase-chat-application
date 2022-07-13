@@ -25,15 +25,21 @@ export const Navbar = () => {
       <div>
         {user ? (
           <>
-            <Link to="/profile">Profile</Link>
+            <Link className="link" to="/profile">
+              Profile
+            </Link>
             <button className="btn" onClick={handleSignout}>
               Logout
             </button>
           </>
         ) : (
           <>
-            <Link to="/register">Register</Link>
-            <Link to="/login">Login</Link>
+            <Link className="btn link" to="/register">
+              Register
+            </Link>
+            <Link className="btn link" to="/login">
+              Login
+            </Link>
           </>
         )}
       </div>
