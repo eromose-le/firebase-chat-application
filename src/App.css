@@ -9,6 +9,7 @@
   --color-4: grey;
   --color-5: #eb4034;
   --color-6: #333;
+  --color-7: rgb(209, 209, 209);
 }
 
 /* Navbar */
@@ -136,6 +137,8 @@ section .form {
   margin-bottom: 10px;
   padding: 10px;
   cursor: pointer;
+  border: 1px solid #eee;
+  border-radius: 7px;
 }
 .user_info {
   display: flex;
@@ -174,6 +177,7 @@ section .form {
   padding: 10px;
   text-align: center;
   border-bottom: 2px solid var(--color-6);
+  background-color: var(--color-7);
 }
 .no_conv {
   font-size: 20px;
@@ -237,7 +241,7 @@ section .form {
   color: white;
 }
 .selected_user {
-  background: var(--color-6);
+  background: var(--color-7);
 }
 .truncate {
   font-size: 14px;
@@ -279,6 +283,10 @@ section .form {
   }
   .user_wrapper {
     /* display: none; */
+  }
+
+  .user_detail h4 {
+    display: none;
   }
   .sm_container {
     padding: 10px 0px;

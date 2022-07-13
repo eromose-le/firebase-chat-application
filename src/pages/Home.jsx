@@ -55,7 +55,7 @@ export const Home = () => {
     const id = user1 > user2 ? `${user1 + user2}` : `${user2 + user1}`;
 
     //
-    const msgsRef = collection(db, 'messages', id, 'chat');
+    const msgsRef = collection(db, 'conversations', id, 'chat');
     const q = query(msgsRef, orderBy('createdAt', 'asc'));
 
     // update ui upon any new message in conversation
@@ -101,7 +101,7 @@ export const Home = () => {
     }
 
     // add || save to message collection -> chat sub collection
-    await addDoc(collection(db, 'messages', id, 'chat'), {
+    await addDoc(collection(db, 'conversations', id, 'chat'), {
       text,
       from: user1,
       to: user2,
