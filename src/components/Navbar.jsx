@@ -9,21 +9,18 @@ export const Navbar = () => {
   const navigate = useNavigate();
   const { user } = useContext(AuthContext);
 
-  console.log('nav auth user', user);
-
   const handleSignout = async () => {
     await updateDoc(doc(db, 'users', auth.currentUser.uid), {
       isOnline: false
     });
     await signOut(auth);
     navigate('/login');
-    console.log('auth user', user);
   };
 
   return (
     <nav>
       <h3>
-        <Link to="/">Messenger</Link>
+        <Link to="/">Akoma Chat</Link>
       </h3>
       <div>
         {user ? (

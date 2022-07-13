@@ -43,9 +43,6 @@ export const Home = () => {
     return () => unsub();
   }, []);
 
-  console.log('user1', user1);
-  console.log('users-list', users);
-
   // 1. Initilize conversation
   // 2. Retrive active user conversation
   const selectUser = async (user) => {
@@ -66,7 +63,6 @@ export const Home = () => {
       });
       setMsgs(msgs);
     });
-    console.log('msgs', msgs);
 
     // get last message b/w logged in user and selected user
     const docSnap = await getDoc(doc(db, 'lastMsg', id));

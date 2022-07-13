@@ -30,7 +30,6 @@ const Login = () => {
 
     try {
       const result = await signInWithEmailAndPassword(auth, email, password);
-      console.log('res', result);
       await updateDoc(doc(db, 'users', result.user.uid), {
         isOnline: true
       });
@@ -48,6 +47,7 @@ const Login = () => {
       return await signOut(auth);
     }
   };
+
   return (
     <section>
       <h3>Log into your Account</h3>
