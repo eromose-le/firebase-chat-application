@@ -23,3 +23,14 @@
 - last chat preview
 - set profile picture
 - delete profile picture
+- authentication
+
+### Test Accounts
+
+```
+email:      zong@outlook.com
+password:   123456
+
+email:      erons@gmail.com
+password:   123456
+```
