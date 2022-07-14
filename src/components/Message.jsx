@@ -4,7 +4,9 @@ import moment from 'moment';
 const Message = ({ msg, user1 }) => {
   const scrollRef = useRef();
 
-  const dateValue = msg.createdAt.toDate().toDateString();
+  const dateValue = msg.createdAt.toDate();
+  // const test = msg.createdAt.getTime().toTimeString();
+  // console.log(test);
 
   useEffect(() => {
     scrollRef.current?.scrollIntoView({ behavior: 'smooth' });
